@@ -1,14 +1,12 @@
 export function twoSum(nums: number[], target: number): number[] {
-	const map = new Map<number, number[]>();
-	nums.forEach((num, i) => map.set(num, [i, target - num]));
+	const map = new Map<number, number>();
+	nums.forEach((num, i) => map.set(num, i));
 
 	let res: number[] = [];
 
 	nums.every((num, i) => {
-		const [_, required] = map.get(num) ?? [];
-		const [j] = map.get(required) ?? [];
-
-		if (j) {
+		const j = map.get(target - num);
+		if (j && j !== i) {
 			res = [i, j];
 			return false;
 		}
