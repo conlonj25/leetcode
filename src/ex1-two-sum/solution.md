@@ -16,7 +16,7 @@ If we map the entire array as a first step this problem comes up
 
 - we need to check indices and skip any that use the same two indices
 
-there is a better solution for this
+There is a better solution for this
 
 - don't map the entire array first
 - start with empty map
