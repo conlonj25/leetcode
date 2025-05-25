@@ -2,7 +2,7 @@ export function floodFill(
 	image: number[][],
 	sr: number,
 	sc: number,
-	color: number
+	color: number,
 ): number[][] {
 	const validNeighbors = [
 		[sr + 1, sc],
@@ -14,7 +14,7 @@ export function floodFill(
 			image[r] !== undefined &&
 			image[r][c] !== undefined &&
 			image[r][c] === image[sr][sc] &&
-			image[r][c] !== color
+			image[r][c] !== color,
 	);
 
 	image[sr][sc] = color;
